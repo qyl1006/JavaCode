@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="src" path="cn.wolfcode.shop.dao"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_152"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/mybatis-3.1.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/mysql-connector-java-5.1.38.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/servlet-api.jar" sourcepath="D:/FeiqWenJian/bunny(FCAA14FE4115)/day02-tomcat-http/资料/tomcat8/apache-tomcat-8.5.28-src.zip"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/slf4j-api-1.6.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/slf4j-log4j12-1.6.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/lombok"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="webapp/WEB-INF/classes"/>
+</classpath>

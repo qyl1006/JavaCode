@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <configuration>
+  	<!-- 配置properties  多看文档 -->
+  	<properties resource="db.properties"></properties>
+  	
+  	<!-- 设置别名 -->
+  	<typeAliases>
+  		<package name="cn.wolfcode.shop.domain"/>
+  	</typeAliases>
+  	
+  	<environments default="dev">
+  		<environment id="dev">
+  			<!-- 事务管理 -->
+  			<transactionManager type="JDBC"></transactionManager>
+  			
+  			<!-- 四要素 -->
+  			<dataSource type="POOLED">
+  				<property name="driver" value="${jdbc.driver}"/>
+  				<property name="url" value="${jdbc.url}"/>
+  				<property name="username" value="${jdbc.username}"/>
+  				<property name="password" value="${jdbc.password}"/>
+  			</dataSource>
+  		</environment>
+  	</environments>
+  	
+  	<mappers>
+  		<!-- 配置关联映射文件 -->
+  		<mapper resource="cn/wolfcode/shop/domain/ProductMapper.xml"/>
+  	</mappers>
+  </configuration>
