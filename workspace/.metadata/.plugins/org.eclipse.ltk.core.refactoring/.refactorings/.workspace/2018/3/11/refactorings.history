@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;fileupload&apos;" deleteContents="false" description="Delete resource &apos;fileupload&apos;" element1="/fileupload" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1520735489804"/>&#x0A;<refactoring comment="Rename resource &apos;fileupload&apos; to &apos;fileupload_dowload&apos;" description="Rename resource &apos;fileupload&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/fileupload" name="fileupload_dowload" stamp="1520744464590" updateReferences="true"/>
+</session>

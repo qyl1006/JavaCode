@@ -1,0 +1,9 @@
+package fileupload_dowload.filedownload;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+@WebServlet("/fileDownload")
+public class FileDownload extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+}

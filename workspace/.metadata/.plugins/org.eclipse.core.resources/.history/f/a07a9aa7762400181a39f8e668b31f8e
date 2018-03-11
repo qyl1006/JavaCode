@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="product">
+  	<!-- Java与数据库映射 -->
+  	<resultMap type="cn.wolfcode.shop.domain.Product" id="baseMap">
+  		<id column="id" property="uid"/>
+  		<result column="productName" property="uproductName"/>
+  		<result column="dir_id" property="udir_id"/>
+  		<result column="salePrice" property="usalePrice"/>
+  		<result column="supplier" property="usupplier"/>
+  		<result column="brand" property="ubrand"/>
+ 		<result column="cutoff" property="ucutoff"/>
+ 		<result column="costPrice" property="ucostPrice"/>
+  	</resultMap>
+  	
+  	<!-- 具体SQL查询 -->
+  	<select id="save">
+  		insert into product (productName, dir_id, salePrice, supplier, brand, cutoff, costPrice) values 
+  			(#{uproductName}, #{udir_id}, #{usalePrice}, #{usupplier}, #{ubrand}, #{ucutoff}, #{ucostPrice) 
+  	</select>
+  	
+  </mapper>

@@ -1,0 +1,10 @@
+package cn.wolfcode.session.base;
+
+import javax.jws.WebService;
+import javax.servlet.http.HttpServlet;
+
+@WebService("/param/list")
+public class ListServlet extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+
+}

@@ -1,0 +1,7 @@
+package fileupload_dowload.filedownload;
+
+import javax.servlet.http.HttpServlet;
+
+public class FileDownload extends HttpServlet {
+
+}

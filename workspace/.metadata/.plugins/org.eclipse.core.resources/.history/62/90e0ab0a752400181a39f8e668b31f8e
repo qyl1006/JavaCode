@@ -1,0 +1,8 @@
+package cn.wolfcode.shop.util;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public abstract class MyBatisUtil {
+	private static SqlSessionFactory fac;
+}
