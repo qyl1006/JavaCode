@@ -3,6 +3,7 @@ package cn.wolfcode.shop.service;
 import java.util.List;
 
 import cn.wolfcode.shop.domain.Product;
+import cn.wolfcode.shop.query.PageResult;
 import cn.wolfcode.shop.query.ProductQueryObject;
 
 public interface IProductService {
@@ -12,6 +13,8 @@ public interface IProductService {
 	Product get(Long id);
 	List<Product> list();
 
-	List<Product> query(ProductQueryObject qo);
+	PageResult query(ProductQueryObject qo);
 	Long queryCount(ProductQueryObject qo);
+	
+	
 }

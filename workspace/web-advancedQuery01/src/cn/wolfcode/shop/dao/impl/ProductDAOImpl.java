@@ -46,20 +46,26 @@ public class ProductDAOImpl implements IProductDAO {
 
 	@Override
 	public List<Product> list() {
-		// TODO Auto-generated method stub
-		return null;
+		@Cleanup
+		SqlSession session = MyBatisUtil.getSession();
+		List<Product> list = session.selectList("product.list");
+		return list;
 	}
 
-	@Override
+	//多条件下分页查询
 	public List<Product> query(ProductQueryObject qo) {
-		// TODO Auto-generated method stub
-		return null;
+		@Cleanup
+		SqlSession session = MyBatisUtil.getSession();
+		
+		return session.selectList("product.query", qo);
 	}
 
 	@Override
 	public Long queryCount(ProductQueryObject qo) {
-		// TODO Auto-generated method stub
-		return null;
+		@Cleanup
+		SqlSession session = MyBatisUtil.getSession();
+		Long l =  session.selectOne("product.count", qo);
+		return l;
 	}
 
 }

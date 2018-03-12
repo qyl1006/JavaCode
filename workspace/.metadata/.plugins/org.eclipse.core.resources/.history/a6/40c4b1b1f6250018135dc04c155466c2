@@ -1,0 +1,9 @@
+package cn.wolfcode.shop.test;
+
+public class Test {
+	public static void main(String[] args) {
+		String str = "a   ";
+		String str2 = "   a  ";
+		System.out.println(str.trim() + str2.trim());
+	}
+}

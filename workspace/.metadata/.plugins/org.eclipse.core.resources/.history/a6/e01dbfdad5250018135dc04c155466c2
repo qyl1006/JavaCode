@@ -1,0 +1,11 @@
+package cn.wolfcode.shop.dao;
+
+import cn.wolfcode.shop.domain.User;
+
+public interface IUserDAO {
+	void save(User u);
+	void update update(User u);
+	void delete(Long id);
+	
+	
+}

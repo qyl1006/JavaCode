@@ -1,0 +1,5 @@
+package cn.wolfcode.shop.query;
+
+public class PageResult {
+	
+}

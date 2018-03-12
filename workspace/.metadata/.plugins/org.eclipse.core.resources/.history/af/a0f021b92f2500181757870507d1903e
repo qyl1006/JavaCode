@@ -1,0 +1,21 @@
+package cn.wolfcode.shop.query;
+
+import java.util.List;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
+public class PageResult {
+	private int currentPage;
+	private int pageSize;
+	
+	//两个查的
+	private Long pageConut;
+	private List<?> data;
+	
+	//三个计算的
+	private int endPage;
+	private int prevPage;
+	private int nextPage;
+}

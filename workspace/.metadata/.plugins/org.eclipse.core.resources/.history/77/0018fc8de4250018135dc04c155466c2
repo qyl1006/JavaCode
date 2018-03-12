@@ -1,0 +1,6 @@
+package cn.wolfcode.shop.query;
+
+public class PageResult {
+	//两个用户输入的
+	
+}

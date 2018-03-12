@@ -1,0 +1,7 @@
+package cn.wolfcode.shop.query;
+
+public class UserQueryObject {
+	//用户输入的
+	private int currentPage;
+	private int pageSize;
+}

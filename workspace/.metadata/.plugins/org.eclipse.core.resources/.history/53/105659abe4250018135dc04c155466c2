@@ -1,0 +1,12 @@
+package cn.wolfcode.shop.query;
+
+public class PageResult {
+	//两个用户输入的
+	private int currentPage;
+	private int pageSize;;
+	
+	//两个查询
+	private Long pageCount;
+	private Long<?> 
+	
+}

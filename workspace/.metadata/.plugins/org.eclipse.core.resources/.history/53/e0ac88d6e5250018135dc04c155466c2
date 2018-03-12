@@ -1,0 +1,15 @@
+package cn.wolfcode.shop.query;
+
+import cn.wolfcode.shop.util.StringUtil;
+
+public class UserQueryObject {
+	//用户输入的
+	private int currentPage = 1;
+	private int pageSize = 2;
+	
+	private String name;
+	
+	public String getName(){
+		return StringUtil.Empty2Null(name);
+	}
+}

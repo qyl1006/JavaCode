@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/user" method="post" id="f1">
+	<table align="center" border="1" width="88%" cellpadding="0" cellspacing="0">
+		<tr>
+		</tr>
+		<tr align="center">
+			<th>编号</th>		
+			<th>姓名</th>		
+			<th>年龄</th>		
+			<th>操作</th>		
+		</tr>
+	
+	<c:forEach items="${result.data}" var="u" varStatus="vs">
+		<tr align="center" style="background-color: ${vs.count % 2 == 0 ? '' : 'red'}">
+			<td>${u.id}</td>
+			<td>${u.name}</td>
+			<td>${u.age}</td>
+			<td>
+				<a href="/user?cmd=edit&id=${u.id}">编辑</a>
+				<a href="/user?cmd=delete&id=${u.id}">删除</a>
+			</td>
+		</tr>
+	</c:forEach>
+	</table>
+</form>
+</body>
+</html>

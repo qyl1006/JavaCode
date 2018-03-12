@@ -1,0 +1,11 @@
+package cn.wolfcode.shop.util;
+
+public abstract class StringUtil {
+	public static boolean haslength(String str){
+		return str != null && str.trim().length() > 0;
+	}
+	
+	public static Object emptyToNull(Object str){
+		return str.trim().length() > 0 ? str : null;
+	}
+}

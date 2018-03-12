@@ -1,0 +1,6 @@
+package cn.wolfcode.shop.query;
+
+public class UserQueryObject {
+	//用户输入的
+	
+}

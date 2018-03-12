@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+${p}
+<form action="/product?cmd=saveOrUpdate">
+		<input type="hidden" name="id"/><br>
+	商品名: <input type="text" name="productName" value="${p.uproductName}"><br>
+	
+	商品分类:<select name="udir_id">
+					<option value="1" ${p.dir_id == 1 ? 'selected' : ''}">鼠标</option>
+					<option value="2" ${p.dir_id == 2 ? 'selected' : ''}">无线鼠标</option>
+					<option value="3" ${p.dir_id == 3 ? 'selected' : ''}">有线鼠标</option>
+					<option value="4" ${p.dir_id == 4 ? 'selected' : ''}">游戏鼠标</option>
+			</select>
+		 <input type="text" name="udir_id" value="${p.uproductName}"><br>
+	售价: <input type="text" name="salePrice" value="${p.usalePrice}"><br>
+	供应商: <input type="text" name="supplier" value="${p.usupplier}"><br>
+	品牌: <input type="text" name="brand" value="${p.ubrand}"><br>
+	折扣: <input type="text" name="cutoff" value="${p.ucutoff}"><br>
+	成本价: <input type="text" name="cosPrice" value="${p.ucosPrice}"><br>
+	
+</form>
+</body>
+</html>

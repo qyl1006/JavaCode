@@ -1,0 +1,7 @@
+package cn.wolfcode.shop.dao.impl;
+
+import cn.wolfcode.shop.dao.IUserDAO;
+
+public class UserDAOImpl implements IUserDAO {
+
+}

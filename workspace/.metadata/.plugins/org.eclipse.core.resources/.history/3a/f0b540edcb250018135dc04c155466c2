@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="product">
+  	<!-- Java与数据库映射 -->
+  	<resultMap type="cn.wolfcode.shop.domain.Product" id="baseMap">
+  		<id column="id" property="uid"/>
+  		<result column="productName" property="uproductName"/>
+  		<result column="dir_id" property="udir_id"/>
+  		<result column="salePrice" property="usalePrice"/>
+  		<result column="supplier" property="usupplier"/>
+  		<result column="brand" property="ubrand"/>
+ 		<result column="cutoff" property="ucutoff"/>
+ 		<result column="costPrice" property="ucosPrice"/>
+  	</resultMap>
+  	
+  	<!-- 具体SQL查询 -->
+  	<insert id="save">
+  		insert into product (productName, dir_id, salePrice, supplier, brand, cutoff, costPrice) values
+  			(#{uproductName}, #{udir_id}, #{usalePrice}, #{usupplier}, #{ubrand}, #{ucutoff}, #{ucosPrice}) 
+  	</insert>
+  	
+  	<update id="update">
+  		update product set productName = #{uproductName}, dir_id = #{udir_id}, salePrice = #{usalePrice}, supplier = #{usupplier}
+  			, brand =  #{ubrand}, cutoff = #{ucutoff}, costPrice = #{ucosPrice} where id = #{uid}
+  	</update>
+  	
+  	<delete id="delete">
+  		delete from product where id = #{uid}
+  	</delete>
+  	
+  	<select id="get" resultMap="baseMap">
+  		select * from product where id = #{uid}
+  	</select>
+  	
+  	<select id="list" resultMap="baseMap">
+  		select * from product
+  	</select>
+  	
+  	<select id="query" resultMap="baseMap">
+  		select * from product 
+  			<where>
+  				<if test="productName != null">
+  					and productName like concat('%',#{productName},'%')
+  				</if>
+  				<if test="minsalePrice > 0">
+  					and salePrice &gt;= #{minsalePrice}
+  				</if>
+  				<if test="maxsalePrice > 0">
+  					and maxsalePrice &lt;= #{maxsalePrice}
+  				</if>
+  				<if test="brand != null">
+  					and like brand concat('%',#{brand},'%')
+  				</if>
+  				<if test="dir_id > 1">
+  					and dir_id = #{dir_id}
+  				</if>
+  			</where>
+  			limit #{start}, #{pageSize}
+  	</select>
+  	
+  	<select id="count" resultType="Long">
+  		select count(id) from product 
+  			<where>
+  				<if test="productName != null">
+  					and productName like concat('%',#{productName},'%')
+  				</if>
+  				<if test="minsalePrice > 0">
+  					and salePrice &gt;= #{salePrice}
+  				</if>
+  				<if test="maxsalePrice > 0">
+  					and maxsalePrice &lt;= #{salePrice}
+  				</if>
+  				<if test="brand != null">
+  					and like brand concat('%',#{brand},'%')
+  				</if>
+  				<if test="dir_id > 1">
+  					and dir_id = #{dir_id}
+  				</if>
+  			</where>
+  	</select>
+  </mapper>

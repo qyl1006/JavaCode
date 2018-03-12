@@ -1,10 +1,12 @@
 package cn.wolfcode.shop.test;
 
-import static org.junit.Assert.fail;
+import java.util.List;
 
 import org.junit.Test;
 
 import cn.wolfcode.shop.domain.Product;
+import cn.wolfcode.shop.query.PageResult;
+import cn.wolfcode.shop.query.ProductQueryObject;
 import cn.wolfcode.shop.service.IProductService;
 import cn.wolfcode.shop.service.impl.ProductServiceImpl;
 
@@ -39,17 +41,18 @@ public class IProductServiceTest {
 
 	@Test
 	public void testList() {
-		fail("Not yet implemented");
+		System.out.println(PageResult.EMTPY_PAGE);
+		List<Product> list = service.list();
+		list.forEach(System.out::println);
 	}
 
-	@Test
-	public void testQuery() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	public void testQueryCount() {
-		fail("Not yet implemented");
+		ProductQueryObject qo = new ProductQueryObject();
+		qo.setProductName("小米");
+		Long l = service.queryCount(qo);
+		System.out.println(l);
 	}
 
 }

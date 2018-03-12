@@ -1,0 +1,14 @@
+package cn.wolfcode.shop.query;
+
+import java.util.List;
+
+public class PageResult {
+	//两个用户输入的
+	private int currentPage;
+	private int pageSize;;
+	
+	//两个查询
+	private Long pageCount;
+	private List<?> data;
+	
+}

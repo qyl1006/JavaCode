@@ -1,0 +1,16 @@
+package cn.wolfcode.shop.util;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public abstract class MyBatisUtil {
+	private static SqlSessionFactory factory;
+	
+	static{
+		try {
+			Resources.getResourceAsStream("mybatis.xml");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,44 @@
+package cn.wolfcode.shop.dao.impl;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import cn.wolfcode.shop.dao.IUserDAO;
+import cn.wolfcode.shop.domain.User;
+import cn.wolfcode.shop.query.UserQueryObject;
+import cn.wolfcode.shop.util.MyBatisUtil;
+import lombok.Cleanup;
+
+public class UserDAOImpl implements IUserDAO {
+
+	public void save(User u) {
+		@Cleanup
+		SqlSession session = MyBatisUtil.getSession();
+		session.update("user.save", u);
+		session.commit();
+	}
+
+	public void update(User u) {
+		
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<User> query(UserQueryObject qo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Long queryCount(UserQueryObject qo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

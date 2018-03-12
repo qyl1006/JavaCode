@@ -1,0 +1,6 @@
+package cn.wolfcode.shop.domain;
+
+@Data
+public class User {
+
+}

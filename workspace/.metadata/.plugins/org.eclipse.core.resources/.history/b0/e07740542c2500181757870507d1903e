@@ -1,0 +1,13 @@
+package cn.wolfcode.shop.util;
+
+public abstract class StringUtil {
+	//判断字符串是否为有值
+	public static boolean haslength(String str){
+		return str != null && str.trim().length() > 0;
+	}
+	
+	
+	public static String emptyToNull(String str){
+		return str.trim().length() > 0 ? str : null;
+	}
+}

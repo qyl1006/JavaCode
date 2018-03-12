@@ -1,0 +1,36 @@
+package cn.wolfcode.shop.test;
+
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+
+import cn.wolfcode.shop.domain.User;
+
+public class UserServiceTest {
+
+	@Test
+	public void testSave() {
+		User u = new User(null, "测试保存", 18)
+	}
+
+	@Test
+	public void testUpdate() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDelete() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testQuery() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testQueryCount() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -34,4 +34,51 @@
   	<select id="get" resultMap="baseMap">
   		select * from product where id = #{uid}
   	</select>
+  	
+  	<select id="list" resultMap="baseMap">
+  		select * from product
+  	</select>
+  	
+  	<select id="query" resultMap="baseMap">
+  		select * from product 
+  			<where>
+  				<if test="productName != null">
+  					and productName like concat('%',#{productName},'%')
+  				</if>
+  				<if test="minsalePrice > 0">
+  					and salePrice &gt;= #{minsalePrice}
+  				</if>
+  				<if test="maxsalePrice > 0">
+  					and salePrice &lt;= #{maxsalePrice}
+  				</if>
+  				<if test="brand != null">
+  					and like brand concat('%',#{brand},'%')
+  				</if>
+  				<if test="dir_id > 1">
+  					and dir_id = #{dir_id}
+  				</if>
+  			</where>
+  			limit #{start}, #{pageSize}
+  	</select>
+  	
+  	<select id="count" resultType="Long">
+  		select count(id) from product 
+  			<where>
+  				<if test="productName != null">
+  					and productName like concat('%',#{productName},'%')
+  				</if>
+  				<if test="minsalePrice > 0">
+  					and salePrice &gt;= #{minsalePrice}
+  				</if>
+  				<if test="maxsalePrice > 0">
+  					and salePrice &lt;= #{maxsalePrice}
+  				</if>
+  				<if test="brand != null">
+  					and like brand concat('%',#{brand},'%')
+  				</if>
+  				<if test="dir_id > 1">
+  					and dir_id = #{dir_id}
+  				</if>
+  			</where>
+  	</select>
   </mapper>
