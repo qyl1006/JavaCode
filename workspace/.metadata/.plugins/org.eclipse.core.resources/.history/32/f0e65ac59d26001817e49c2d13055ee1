@@ -1,0 +1,12 @@
+package cn.wolfcode.smis.dao;
+
+import cn.wolfcode.smis.domain.User;
+
+public interface IUserDAOImpl {
+	void save(User u);
+	void update(User u);
+	void delete(Long id);
+	User get(Long id);
+	
+	PageResult query(UserQueryObject qo);
+}

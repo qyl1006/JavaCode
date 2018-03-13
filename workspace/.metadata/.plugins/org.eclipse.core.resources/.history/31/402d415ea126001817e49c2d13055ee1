@@ -1,0 +1,46 @@
+package cn.wolfcode.smis.dao.impl;
+
+import cn.wolfcode.smis.dao.IUserDAO;
+import cn.wolfcode.smis.domain.User;
+import cn.wolfcode.smis.query.PageResult;
+import cn.wolfcode.smis.query.UserQueryObject;
+
+public class UserDAOImpl implements IUserDAO {
+
+	@Override
+	public void save(User u) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update(User u) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public User get(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PageResult query(UserQueryObject qo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Long queryCount(UserQueryObject qo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

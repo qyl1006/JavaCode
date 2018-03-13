@@ -1,0 +1,53 @@
+package cn.wolfcode.smis.dao.impl;
+
+import org.apache.ibatis.session.SqlSession;
+
+import cn.wolfcode.smis.dao.IUserDAO;
+import cn.wolfcode.smis.domain.User;
+import cn.wolfcode.smis.query.PageResult;
+import cn.wolfcode.smis.query.UserQueryObject;
+import cn.wolfcode.smis.util.MybatisUtil;
+import lombok.Cleanup;
+
+public class UserDAOImpl implements IUserDAO {
+
+	public void save(User u) {
+		@Cleanup
+		SqlSession session = MybatisUtil.getSession();
+		session.update("user.save", u);
+		session.commit();
+	}
+
+	public void update(User u) {
+		@Cleanup
+		SqlSession session = MybatisUtil.getSession();
+		session.update("user.update", u);
+		session.commit();
+	}
+
+	public void delete(Long id) {
+		@Cleanup
+		SqlSession session = MybatisUtil.getSession();
+		session.delete("user.delete", id);
+		session.commit();
+	}
+
+	public User get(Long id) {
+		@Cleanup
+		SqlSession session = MybatisUtil.getSession();
+		return session.selectOne("user.get", id);
+		
+	}
+
+	@Override
+	public PageResult query(UserQueryObject qo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Long queryCount(UserQueryObject qo) {
+		
+		return null;
+	}
+
+}

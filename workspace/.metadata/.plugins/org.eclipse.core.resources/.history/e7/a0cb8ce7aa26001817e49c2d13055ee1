@@ -1,0 +1,35 @@
+package cn.wolfcode.smis.test;
+
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+
+import cn.wolfcode.smis.domain.User;
+import cn.wolfcode.smis.service.IUserService;
+import cn.wolfcode.smis.service.impl.UserServiceImpl;
+
+public class UserServiceTest {
+	private IUserService service = new UserServiceImpl();
+
+	@Test
+	public void testSave() {
+		User u = new User(null, "测试保存", 18);
+		service.save(u);
+	}
+
+	@Test
+	public void testUpdate() {
+		
+	}
+
+	@Test
+	public void testDelete() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGet() {
+		fail("Not yet implemented");
+	}
+
+}

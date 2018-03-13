@@ -1,0 +1,5 @@
+package cn.wolfcode.smis.dao;
+
+public interface IUserDAOImpl {
+	void save(User u);
+}

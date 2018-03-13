@@ -1,0 +1,53 @@
+package cn.wolfcode.smis.test;
+
+import org.junit.Test;
+
+import cn.wolfcode.smis.dao.IUserDAO;
+import cn.wolfcode.smis.dao.impl.UserDAOImpl;
+import cn.wolfcode.smis.domain.User;
+import cn.wolfcode.smis.query.UserQueryObject;
+import cn.wolfcode.smis.service.IUserService;
+import cn.wolfcode.smis.service.impl.UserServiceImpl;
+
+public class UserServiceTest {
+	private IUserService service = new UserServiceImpl();
+	
+	private IUserDAO dao = new UserDAOImpl();
+
+	@Test
+	public void testSave() {
+		User u = new User(null, "师姐好美", 18);
+		service.save(u);
+	}
+
+	@Test
+	public void testUpdate() {
+		User u = new User(10L, "测试更新", 19);
+		service.update(u);
+	}
+
+	@Test
+	public void testDelete() {
+		service.delete(10L);
+	}
+
+	@Test
+	public void testGet() {
+		User user = service.get(11L);
+		System.out.println(user);
+	}
+	@Test
+	public void testQueryCount() {
+		UserQueryObject qo = new UserQueryObject();
+		qo.setName("师姐");
+		Long count = dao.queryCount(qo);
+		System.out.println(count);
+	}
+	@Test
+	public void testQuery() {
+		User user = service.get(11L);
+		System.out.println(user);
+	}
+	
+
+}

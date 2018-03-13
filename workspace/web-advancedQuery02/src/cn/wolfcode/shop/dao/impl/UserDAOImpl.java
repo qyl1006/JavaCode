@@ -52,4 +52,9 @@ public class UserDAOImpl implements IUserDAO {
 		return session.selectOne("user.get", id);
 	}
 
+	public User login(User u) {
+		SqlSession session = MyBatisUtil.getSession();
+		return session.selectOne("user.login", u);
+	}
+
 }

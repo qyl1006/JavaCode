@@ -1,0 +1,56 @@
+package cn.wolfcode.shop.dao.impl;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import cn.wolfcode.shop.dao.IUserDAO;
+import cn.wolfcode.shop.domain.User;
+import cn.wolfcode.shop.query.PageResult;
+import cn.wolfcode.shop.query.UserQueryObject;
+import cn.wolfcode.shop.util.MyBatisUtil;
+import lombok.Cleanup;
+
+public class UserDAOImpl implements IUserDAO {
+
+	public void save(User u) {
+		@Cleanup
+		SqlSession session = MyBatisUtil.getSession();
+		session.update("user.save", u);
+		session.commit();
+	}
+
+	public void update(User u) {
+		@Cleanup
+		SqlSession session = MyBatisUtil.getSession();
+		session.update("user.update", u);
+		session.commit();
+	}
+
+	public void delete(Long id) {
+		@Cleanup
+		SqlSession session = MyBatisUtil.getSession();
+		session.update("user.delete", id);
+		session.commit();
+	}
+
+	public User get(Long id) {
+		@Cleanup
+		SqlSession session = MyBatisUtil.getSession();
+		return session.selectOne("user.get", id);
+	}
+
+	public List<User> query(UserQueryObject qo) {
+		@Cleanup
+		SqlSession session = MyBatisUtil.getSession();
+		session.selectList("user.query", qo);
+		return null;
+	}
+
+	public Long queryCount(UserQueryObject qo) {
+		@Cleanup
+		SqlSession session = MyBatisUtil.getSession();
+		return session.selectOne("user.queryCount", qo);
+	}
+
+}

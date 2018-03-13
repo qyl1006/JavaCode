@@ -1,0 +1,14 @@
+package cn.wolfcode.shop.web.servlet;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+import cn.wolfcode.shop.service.IUserService;
+import cn.wolfcode.shop.service.impl.UserServiceImpl;
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+	
+	private IUserService service = new UserServiceImpl();
+}

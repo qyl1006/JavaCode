@@ -1,0 +1,73 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		function goPage(pageNum){
+			var form = document.getElementById("f1");
+			form.currentPage.value = pageNum;
+			form.submit()
+		}
+	</script>
+</head>
+<body>
+<form action="/user" method="post" id="f1">
+	<table align="center" border="1" width="88%" cellpadding="0" cellspacing="0">
+		<tr align="center">
+			<td colspan="4">
+				<a href="/user?cmd=edit">增加</a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				关键字: <input type="text" name="name" value="${qo.name}"/>
+						<input type="button" value="查询" onclick="goPage(1)"/>
+			</td>
+		</tr>
+		<tr align="center">
+			<th>编号</th>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>操作</th>
+		</tr>
+		
+	<c:forEach items="${result.data}" var="u" varStatus="vs">
+		<tr align="center"  style="background-color: ${vs.count % 2 == 0 ? '' : 'red'}">
+			<td>${u.id}</td>
+			<td>${u.name}</td>
+			<td>${u.age}</td>
+			<td>
+				<a href="/user?cmd=edit&id=${u.id}">编辑</a>
+				<a href="/user?cmd=delete&id=${u.id}">删除</a>
+			</td>
+		</tr>
+	</c:forEach>
+	
+	<tr>
+		<td colspan="4">
+			<a href="javascript:goPage(1)">首页</a>
+			<a href="javascript:goPage(${result.prevPage})">上一页</a>
+			<a href="javascript:goPage(${result.nextPage})">下一页</a>
+			<a href="javascript:goPage(${result.endPage})">尾页</a>
+			
+			当前${result.currentPage}/${result.endPage}页
+			共有${result.pageCount}条
+			每页<select name="pageSize" onchange="goPage(1)">
+					<option ${pageSize == 3 ? 'selected' : ''}>3</option>
+					<option ${pageSize == 3 ? 'selected' : ''}>6</option>
+					<option ${pageSize == 3 ? 'selected' : ''}>9</option>
+					
+			</select>条
+			跳转:<input type="number" name="currentPage" value="${result.currentPage}"/>
+				<input type="number" value="GO"/>
+		</td>
+	</tr>
+	</table>
+</form>
+</body>
+</html>

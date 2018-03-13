@@ -1,0 +1,11 @@
+package cn.wolfcode.smis.query;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter @Getter @NoArgsConstructor
+public class PageResult {
+	public static PageResult EMPTY_PAGE = 
+}

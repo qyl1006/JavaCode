@@ -1,0 +1,5 @@
+package cn.wolfcode.smis.domain;
+
+public class User {
+
+}

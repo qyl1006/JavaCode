@@ -12,4 +12,5 @@ public interface IUserService {
 	
 	
 	PageResult query(UserQueryObject qo);
+	User login(User u);
 }

@@ -13,4 +13,5 @@ public interface IUserDAO {
 	
 	List<User> query(UserQueryObject qo);
 	Long queryCount(UserQueryObject qo);
+	User login(User u);
 }

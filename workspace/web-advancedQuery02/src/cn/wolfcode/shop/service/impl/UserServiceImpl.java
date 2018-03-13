@@ -37,4 +37,8 @@ public class UserServiceImpl implements IUserService {
 	public User get(Long id) {
 		return dao.get(id);
 	}
+
+	public User login(User u) {
+		return dao.login(u);
+	}
 }

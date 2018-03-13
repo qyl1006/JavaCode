@@ -1,0 +1,5 @@
+package cn.wolfcode.smis.service;
+
+public interface IUserService {
+
+}

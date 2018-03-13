@@ -1,0 +1,44 @@
+package cn.wolfcode.shop.dao.impl;
+
+import cn.wolfcode.shop.dao.IUserDAO;
+import cn.wolfcode.shop.domain.User;
+import cn.wolfcode.shop.query.PageResult;
+import cn.wolfcode.shop.query.UserQueryObject;
+
+public class UserDAOImpl implements IUserDAO {
+
+	public void save(User u) {
+		
+	}
+
+	@Override
+	public void update(User u) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public User get(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PageResult query(UserQueryObject qo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Long queryCount(UserQueryObject qo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -39,5 +39,9 @@
   			</where>
   			limit #{start}, #{pageSize}
   	</select>
+  	
+  <select id="login" resultType="user">
+  		select * from t_user where name = #{name} and age = #{age}
+  </select>
   
   </mapper>

@@ -1,0 +1,8 @@
+package cn.wolfcode.smis.util;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public abstract class MybatisUtil {
+	private static SqlSessionFactory factory;
+}

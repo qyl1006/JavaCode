@@ -1,7 +1,5 @@
 package cn.wolfcode.shop.test;
 
-import static org.junit.Assert.fail;
-
 import org.junit.Test;
 
 import cn.wolfcode.shop.domain.User;

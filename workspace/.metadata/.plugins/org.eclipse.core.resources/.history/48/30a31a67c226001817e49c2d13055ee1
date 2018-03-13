@@ -1,0 +1,36 @@
+package cn.wolfcode.shop.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import cn.wolfcode.shop.dao.IUserDAO;
+import cn.wolfcode.shop.dao.impl.UserDAOImpl;
+import cn.wolfcode.shop.service.IUserService;
+import cn.wolfcode.shop.service.impl.UserServiceImpl;
+
+public class UserServiceTest {
+	private IUserService service = new UserServiceImpl();
+	private IUserDAO dao = new UserDAOImpl();
+	
+	@Test
+	public void testSave() {
+		
+	}
+
+	@Test
+	public void testUpdate() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDelete() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGet() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,9 @@
+package cn.wolfcode.smis.query;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
+public class UserQueryObject {
+	
+}

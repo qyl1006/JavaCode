@@ -1,0 +1,16 @@
+package cn.wolfcode.smis.dao;
+
+import java.util.List;
+
+import cn.wolfcode.smis.domain.User;
+import cn.wolfcode.smis.query.UserQueryObject;
+
+public interface IUserDAO {
+	void save(User u);
+	void update(User u);
+	void delete(Long id);
+	User get(Long id);
+	
+	List<User> query(UserQueryObject qo);
+	Long queryCount(UserQueryObject qo);
+}

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun cn.wolfcode.shop.test.UserServiceTest.testQueryCount" project="web-advancedQuery02" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testcase name="testQueryCount" classname="cn.wolfcode.shop.test.UserServiceTest" time="0.873"/>
-</testrun>
