@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+	
+	
+  	<insert id="save">
+  		insert into t_user (name, age) values (#{name}, #{age})
+  	</insert>
+  	
+  	<update id="update">
+  		update t_user set name = #{name}, age = #{age} where id = #{id}
+  	</update>
+  	
+  	<delete id="delete">
+  		delete from t_user where id = #{id}
+  	</delete>
+  	
+  	<select id="get" resultType="user">
+  		select * from t_user where id = #{id}
+  	</select>
+  	
+  	<select id="queryCount" resultType="Long">
+  		select count(id) from t_user
+  			<where>
+  				<if test="name != null">
+  					and name like concat('%', #{name} ,'%')
+  				</if>
+  			</where>
+  	</select>
+  	
+  	<select id="query" resultType="user">
+  		select * from t_user
+  			<where>
+  				<if test="name != null">
+  					and name like concat('%', #{name} ,'%')
+  				</if>
+  			</where>
+  			limit #{start}, #{pageSize}
+  	</select>
+  </mapper>

@@ -9,6 +9,7 @@ import lombok.Setter;
 
 @Setter @Getter
 public class PageResult {
+	@SuppressWarnings("unchecked")
 	public static final PageResult EMPTY = new PageResult(1, 1, 0L, Collections.EMPTY_LIST);
 	
 	private int currentPage;

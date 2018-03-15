@@ -1,0 +1,68 @@
+package cn.colfcode.shop.web.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cn.colfcode.shop.query.ProductQueryObject;
+import cn.colfcode.shop.service.IProductService;
+import cn.colfcode.shop.service.impl.ProductServiceImpl;
+import cn.colfcode.shop.util.StringUtil;
+
+@WebServlet("/product")
+public class ProductServlet extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+	private IProductService service = new ProductServiceImpl();
+	
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		
+		String cmd = req.getParameter("cmd");
+		
+		if("edit".equals(cmd)){
+			edit(req, resp);
+		}else if("delete".equals(cmd)){
+			delete(req, resp);
+		}else if("saveOrUpdate".equals(cmd)){
+			saveOrUpdate(req, resp);
+		}else{
+			list(req, resp);
+		}
+	}
+	
+	protected void list(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		ProductQueryObject qo = creatQo(req);
+		
+	}
+	private ProductQueryObject creatQo(HttpServletRequest req) {
+		ProductQueryObject qo = new ProductQueryObject();
+		
+		String keyWord = req.getParameter("keyWord");
+		String currentPage  = req.getParameter("currentPage");
+		String pageSize = req.getParameter("pageSize");
+		String  minPrice = req.getParameter("minPrice");
+		String  maxPrice = req.getParameter("maxPrice");
+		
+		if(StringUtil.hasLength(keyWord)){
+			qo.setKeyWord(keyWord);
+		}
+		if(StringUtil.hasLength(currentPage)){
+			qo.setCurrentPage(Integer.valueOf(currentPage));
+		}
+		return qo;
+	}
+	protected void delete(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+	}
+	protected void edit(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+	}
+	protected void saveOrUpdate(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+	}

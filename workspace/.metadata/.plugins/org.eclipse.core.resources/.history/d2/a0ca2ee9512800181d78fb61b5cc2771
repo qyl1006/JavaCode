@@ -1,0 +1,15 @@
+package cn.colfcode.shop.util;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public abstract class MyBatisUtil {
+	private static SqlSessionFactory factory;
+	
+	static{
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

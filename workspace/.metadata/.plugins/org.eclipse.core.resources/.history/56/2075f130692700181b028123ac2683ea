@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="product">
+	
+	<insert id="save">
+		insert into t_product (name, price, info) values (#{name}, #{price}, #{info})
+	</insert>
+	
+	<update id="update">
+		update t_product set name = #{name}, price = #{price}, info = #{info} where id = #{id}
+	</update>
+	
+	<delete id="delete">
+		delete from t_product where id = #{id}
+	</delete>
+	
+	<select id="get" resultType="product">
+		select * from t_product where id = #{id}
+	</select>
+	
+	<select id="queryCount" resultType="Long">
+		select * from t_product
+			<where>
+				<if test="name != null">
+					and name = #{name}
+				</if>
+				<if test="info != null">
+					and info = #{info}
+				</if>
+				<if test="Minprice > 0">
+					and price
+				</if>
+			</where>
+	</select>
+	</mapper>

@@ -1,0 +1,19 @@
+package cn.wolfcode.smis.query;
+
+import java.math.BigDecimal;
+
+public class ProductQueryObject {
+	private int currentPage = 1;
+	private int pageSize = 2;
+	
+	private String name;
+	private String info;
+	
+	private BigDecimal price;
+	
+	public int getStart(){
+		return (currentPage - 1) * pageSize;
+	}
+	
+	
+}

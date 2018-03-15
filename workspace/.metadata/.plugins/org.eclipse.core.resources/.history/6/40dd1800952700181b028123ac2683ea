@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="product">
+  	<insert id="save">
+  		insert t_product (name, price, info) values (#{name}, #{price}, #{info})
+  	</insert>
+  	
+  	<update id="update">
+  		update t_product name = #{name}, price = #{price}, info = #{info}
+  	</update>
+  	
+  </mapper>

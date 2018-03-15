@@ -1,0 +1,31 @@
+package cn.wolfcode.smis.service.impl;
+
+import cn.wolfcode.smis.dao.IProductDAO;
+import cn.wolfcode.smis.dao.impl.ProductDAOImpl;
+import cn.wolfcode.smis.domain.Product;
+import cn.wolfcode.smis.service.IProductService;
+
+public class ProductServiceImpl implements IProductService {
+	private IProductDAO dao = new ProductDAOImpl();
+	
+	public void save(Product p) {
+		dao.save(p);
+	}
+
+	public void update(Product p) {
+		dao.update(p);
+	}
+
+
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Product get(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

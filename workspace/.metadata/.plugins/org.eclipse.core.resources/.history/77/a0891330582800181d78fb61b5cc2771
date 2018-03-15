@@ -1,0 +1,5 @@
+package cn.colfcode.shop.query;
+
+public class PageResult {
+
+}

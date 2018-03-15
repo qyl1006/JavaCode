@@ -1,0 +1,40 @@
+package cn.wolfcode.smis.test;
+
+import static org.junit.Assert.fail;
+
+import java.math.BigDecimal;
+
+import org.junit.Test;
+
+import cn.wolfcode.smis.dao.IProductDAO;
+import cn.wolfcode.smis.dao.impl.ProductDAOImpl;
+import cn.wolfcode.smis.domain.Product;
+import cn.wolfcode.smis.service.IProductService;
+import cn.wolfcode.smis.service.impl.ProductServiceImpl;
+
+public class ProductServiceTest {
+	private IProductService service = new ProductServiceImpl();
+	private IProductDAO dao = new ProductDAOImpl();
+		
+	@Test
+	public void testSave() {
+		Product p = new Product(null, "测试保存", new BigDecimal("11"), "123");
+		service.save(p);
+	}
+
+	@Test
+	public void testUpdate() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDelete() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGet() {
+		fail("Not yet implemented");
+	}
+
+}

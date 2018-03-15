@@ -1,0 +1,8 @@
+package cn.wolfcode.shop.domain;
+
+import javax.annotation.Generated;
+
+@Data
+public class Product {
+	
+}

@@ -1,0 +1,10 @@
+package cn.wolfcode.shop.domain;
+
+import lombok.Data;
+
+@Data
+public class Product {
+	private Long name;
+	private Long name;
+	private Long name;
+}

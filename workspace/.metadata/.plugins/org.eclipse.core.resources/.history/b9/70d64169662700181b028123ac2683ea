@@ -1,0 +1,35 @@
+package cn.wolfcode.smis.test;
+
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+
+import cn.wolfcode.smis.dao.IProductDAO;
+import cn.wolfcode.smis.dao.impl.ProductDAOImpl;
+import cn.wolfcode.smis.service.IProductService;
+import cn.wolfcode.smis.service.impl.ProductServiceImpl;
+
+public class ProductServiceTest {
+	private IProductService service = new ProductServiceImpl();
+	private IProductDAO dao = new ProductDAOImpl();
+		
+	public void testSave() {
+		
+	}
+
+	@Test
+	public void testUpdate() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDelete() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGet() {
+		fail("Not yet implemented");
+	}
+
+}

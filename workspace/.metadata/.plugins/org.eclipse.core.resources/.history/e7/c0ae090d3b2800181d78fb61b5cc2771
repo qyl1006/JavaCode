@@ -1,0 +1,12 @@
+package cn.wolfcode.shop.query;
+
+import java.util.List;
+
+import cn.wolfcode.shop.domain.Product;
+
+public class PageResult {
+	
+	
+	private Long pageCount;
+	private List<Product> data;
+}

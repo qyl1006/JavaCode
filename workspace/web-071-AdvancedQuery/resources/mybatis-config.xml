@@ -5,8 +5,11 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
   
   <configuration>
+  
   	<!-- 配置properties  多看文档 -->
   	<properties resource="db.properties"></properties>
+  	
+ 	
   	
   	<!-- 设置别名 -->
   	<typeAliases>

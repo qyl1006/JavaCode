@@ -1,0 +1,38 @@
+package cn.colfcode.shop.test;
+
+import org.junit.Test;
+
+import cn.colfcode.shop.dao.IProductDAO;
+import cn.colfcode.shop.dao.impl.ProductDAOImpl;
+import cn.colfcode.shop.domain.Product;
+import cn.colfcode.shop.service.IProductService;
+import cn.colfcode.shop.service.impl.ProductServiceImpl;
+
+public class ProductServiceTest {
+	private IProductService service = new ProductServiceImpl();
+	private IProductDAO dao = new ProductDAOImpl();
+	
+	
+	@Test
+	public void testSave() {
+		Product p = new Product(null, "测试更新04", null, null);
+		service.save(p);
+	}
+
+	@Test
+	public void testUpdate() {
+		Product p = new Product(17L, "测试更新05", null, null);
+		service.update(p);
+	}
+
+	@Test
+	public void testDel() {
+		service.delete(17L);
+	}
+
+	@Test
+	public void testGet() {
+		System.out.printlnservice.get(14L));
+	}
+
+}

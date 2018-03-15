@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1">
+  
+  <!-- 配置前端控制器 -->
+  <servlet>
+  	<servlet-name>mvc</servlet-name>
+  	<servlet-class>cn.wolfcode.easymvc.DispatcherServlet</servlet-class>
+  	<!-- 配置去哪个包中找分支控制器 -->
+  	<init-param>
+  		<param-name>basePackageName</param-name>
+  		<param-value>cn.wolfcode.hello.controller</param-value>
+  	</init-param>
+  	<!-- 在启动服务器的时候创建对象完成初始化 -->
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>mvc</servlet-name>
+	<url-pattern>*.do</url-pattern>  
+  </servlet-mapping>
+</web-app>

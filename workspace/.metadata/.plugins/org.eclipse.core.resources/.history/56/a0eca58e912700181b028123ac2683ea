@@ -1,0 +1,16 @@
+package cn.wolfcode.shop.query;
+
+import java.math.BigDecimal;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter @Getter
+public class ProductQueryObject {
+	private int currentPage = 1;
+	private int pageCount = 2;
+	
+	private String keyWord;
+	
+	private BigDecimal minPrice;
+}

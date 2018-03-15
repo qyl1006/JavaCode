@@ -1,0 +1,17 @@
+package cn.wolfcode.shop.dao;
+
+import java.util.List;
+
+import cn.wolfcode.shop.domain.Product;
+import cn.wolfcode.shop.query ProductQueryObject;
+import cn.wolfcode.shop.query.ProductQueryObject;
+
+public interface IProductDAO {
+	void save(Product p);
+	void update(Product p);
+	void delete(Long id);
+	Product get(Long id);
+	
+	Long queryCount(ProductQueryObject qo);
+	List<Product> queryCount(ProductQueryObject qo);
+}

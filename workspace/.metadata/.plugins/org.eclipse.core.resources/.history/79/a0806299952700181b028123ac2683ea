@@ -1,0 +1,30 @@
+package cn.wolfcode.shop.service.impl;
+
+import cn.wolfcode.shop.dao.IProductDAO;
+import cn.wolfcode.shop.dao.impl.ProduDAOImpl;
+import cn.wolfcode.shop.domain.Product;
+import cn.wolfcode.shop.service.IProduService;
+
+public class ProduServiceImpl implements IProduService {
+
+	private IProductDAO dao = new ProduDAOImpl();
+	
+	public void save(Product p) {
+		dao.save(p);
+	}
+
+	public void update(Product p) {
+		dao.update(p);
+	}
+
+	public void delete(Long id) {
+		dao.delete(id);
+	}
+
+	@Override
+	public Product get(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

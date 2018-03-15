@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ProductServiceTest.testDelete (1)" project="tack03" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testcase name="testDelete" classname="cn.wolfcode.shop.test.ProductServiceTest" time="0.584">
+    <error>org.apache.ibatis.exceptions.PersistenceException: &#13;
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1&#13;
+### The error may involve defaultParameterMap&#13;
+### The error occurred while setting parameters&#13;
+### SQL: delete from t_product where id = {id}&#13;
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1&#13;
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:23)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:147)&#13;
+	at cn.wolfcode.shop.dao.impl.ProductDAOImpl.delete(ProductDAOImpl.java:31)&#13;
+	at cn.wolfcode.shop.service.impl.ProductServiceImpl.delete(ProductServiceImpl.java:22)&#13;
+	at cn.wolfcode.shop.test.ProductServiceTest.testDelete(ProductServiceTest.java:34)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '}' at line 1&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)&#13;
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)&#13;
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:939)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)&#13;
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)&#13;
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)&#13;
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)&#13;
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)&#13;
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)&#13;
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1192)&#13;
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:41)&#13;
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:66)&#13;
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:45)&#13;
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:108)&#13;
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)&#13;
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:145)&#13;
+	... 26 more&#13;
+&#13;
+</error>
+  </testcase>
+</testrun>

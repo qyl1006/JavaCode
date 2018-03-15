@@ -1,0 +1,51 @@
+package cn.wolfcode.shop.test;
+
+import static org.junit.Assert.*;
+
+import java.math.BigDecimal;
+
+import org.junit.Test;
+
+import cn.wolfcode.shop.dao.IProductDAO;
+import cn.wolfcode.shop.dao.impl.ProductDAOImpl;
+import cn.wolfcode.shop.domain.Product;
+import cn.wolfcode.shop.service.IProductService;
+import cn.wolfcode.shop.service.impl.ProductServiceImpl;
+
+public class ProductServiceTest {
+	private IProductService service = new ProductServiceImpl();
+	private IProductDAO dao = new ProductDAOImpl();
+	
+	
+	@Test
+	public void testSave() {
+		Product p = new Product(null, "测试保存11", new BigDecimal("1112233"), "123");
+		service.save(p);
+	}
+
+	@Test
+	public void testUpdate() {
+		Product p = new Product(13L, "测试保存11", new BigDecimal("1112233"), "123");
+		service.update(p);
+	}
+
+	@Test
+	public void testDelete() {
+		service.delete(12L);
+	}
+
+	@Test
+	public void testGet() {
+		System.out.println(service.get(14L));
+	}
+	
+	@Test
+	public void testQueryCount() {
+		
+	}
+	@Test
+	public void testQuery() {
+		System.out.println(service.get(14L));
+	}
+
+}

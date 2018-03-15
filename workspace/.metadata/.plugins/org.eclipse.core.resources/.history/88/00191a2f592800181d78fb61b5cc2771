@@ -1,0 +1,46 @@
+package cn.colfcode.shop.service.impl;
+
+import java.util.List;
+
+import cn.colfcode.shop.dao.IProductDAO;
+import cn.colfcode.shop.dao.impl.ProductDAOImpl;
+import cn.colfcode.shop.domain.Product;
+import cn.colfcode.shop.query.PageResult;
+import cn.colfcode.shop.query.ProductQueryObject;
+import cn.colfcode.shop.service.IProductService;
+
+public class ProductServiceImpl implements IProductService {
+	private IProductDAO dao = new ProductDAOImpl();
+	
+
+	public void save(Product p) {
+		dao.save(p);
+	}
+
+	@Override
+	public void update(Product p) {
+		dao.update(p);
+	}
+
+	@Override
+	public void delete(Long id) {
+		dao.delete(id);
+	}
+
+	@Override
+	public Product get(Long id) {
+		return dao.get(id);
+	}
+
+	@Override
+	public PageResult query(ProductQueryObject qo) {
+		Long count = dao.queryCount(qo);
+		if(count == 0L){
+			return PageResult.EMPTY;
+		}
+		
+		List<Product> data = dao.query(qo);
+		return null;
+	}
+
+}

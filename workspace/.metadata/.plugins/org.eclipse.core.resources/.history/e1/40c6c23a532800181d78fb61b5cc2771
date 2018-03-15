@@ -1,0 +1,34 @@
+package cn.colfcode.shop.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import cn.colfcode.shop.service.IProductService;
+import cn.colfcode.shop.service.impl.ProductServiceImpl;
+
+public class ProductServiceTest {
+	private IProductService service = new ProductServiceImpl();
+	
+	
+	@Test
+	public void testSave() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUpdate() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDel() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGet() {
+		fail("Not yet implemented");
+	}
+
+}

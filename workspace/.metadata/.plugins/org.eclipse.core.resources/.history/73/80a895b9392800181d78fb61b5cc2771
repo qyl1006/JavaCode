@@ -1,0 +1,14 @@
+package cn.wolfcode.shop.query;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter @Setter @AllArgsConstructor @NoArgsConstructor
+public class ProduQueryObject {
+	private int currentPage;
+	private int endPage;
+	
+	private Long pageCount;
+}

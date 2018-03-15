@@ -1,0 +1,37 @@
+package cn.colfcode.shop.query;
+
+import java.util.List;
+
+import cn.colfcode.shop.domain.Product;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor
+public class PageResult {
+	private int currentPage;
+	private int pageSize2;
+	
+	private Long pageCount;
+	private List<Product> data;
+	
+	private int endPage;
+	private int prevPage;
+	private int nextPage;
+	public PageResult(int currentPage, int pageSize2, Long pageCount,
+			List<Product> data) {
+		super();
+		this.currentPage = currentPage;
+		this.pageSize2 = pageSize2;
+		this.pageCount = pageCount;
+		this.data = data;
+		
+		if(pageCount <= pageSize){
+			
+		}
+	}
+	
+	
+}

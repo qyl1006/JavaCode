@@ -1,0 +1,10 @@
+package cn.wolfcode.smis.dao;
+
+import cn.wolfcode.smis.domain.Product;
+
+public interface IProductDAO {
+	void save(Product p);
+	void update(Product p);
+	void delete(Long id);
+	void save(Product p);
+}

@@ -1,0 +1,33 @@
+package cn.colfcode.shop.service.impl;
+
+import cn.colfcode.shop.dao.IProductDAO;
+import cn.colfcode.shop.dao.impl.ProductDAOImpl;
+import cn.colfcode.shop.domain.Product;
+import cn.colfcode.shop.service.IProductService;
+
+public class ProductServiceImpl implements IProductService {
+	private IProductDAO dao = new ProductDAOImpl();
+	
+
+	public void save(Product p) {
+		dao.save(p);
+	}
+
+	@Override
+	public void update(Product p) {
+		
+	}
+
+	@Override
+	public void del(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void get(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

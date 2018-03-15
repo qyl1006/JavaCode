@@ -1,0 +1,17 @@
+package cn.wolfcode.shop.query;
+
+import java.util.List;
+
+import cn.wolfcode.shop.domain.Product;
+
+public class PageResult {
+	private int currentPage;
+	private int pageSize;
+	
+	private Long pageCount;
+	private List<Product> data;
+	
+	private int endPage;
+	private int prevPage;
+	private int nextPage;
+}

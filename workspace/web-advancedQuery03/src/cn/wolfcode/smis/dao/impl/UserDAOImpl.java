@@ -6,7 +6,6 @@ import org.apache.ibatis.session.SqlSession;
 
 import cn.wolfcode.smis.dao.IUserDAO;
 import cn.wolfcode.smis.domain.User;
-import cn.wolfcode.smis.query.PageResult;
 import cn.wolfcode.smis.query.UserQueryObject;
 import cn.wolfcode.smis.util.MybatisUtil;
 import lombok.Cleanup;

@@ -1,0 +1,10 @@
+package cn.colfcode.shop.service;
+
+import cn.colfcode.shop.domain.Product;
+
+public interface IProductService {
+	void save(Product p);
+	void update(Product p);
+	void del(Long id);
+	void get(Long id);
+}

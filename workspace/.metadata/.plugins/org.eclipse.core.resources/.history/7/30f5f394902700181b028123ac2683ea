@@ -1,0 +1,15 @@
+package cn.wolfcode.shop.util;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public abstract class MyBatisUtil {
+	private SqlSessionFactory factory;
+	
+	static{
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
