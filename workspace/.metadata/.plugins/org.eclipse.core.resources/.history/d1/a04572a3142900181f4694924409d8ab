@@ -1,0 +1,7 @@
+package cn.wlfcode.shop.dao;
+
+import cn.wlfcode.shop.domain.Product;
+
+public interface IProductDAO {
+	void save(Product p);
+}

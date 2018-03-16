@@ -1,0 +1,31 @@
+package cn.wlfcode.shop.service.impl;
+
+import cn.wlfcode.shop.dao.IProductDAO;
+import cn.wlfcode.shop.dao.impl.ProductDAOImpl;
+import cn.wlfcode.shop.domain.Product;
+import cn.wlfcode.shop.service.IProductService;
+
+public class ProductServiceImpl implements IProductService {
+	private IProductDAO dao = new ProductDAOImpl();
+	
+	public void save(Product p) {
+		dao.save(p);
+	}
+
+	@Override
+	public void update(Product p) {
+		dao.update(p);
+	}
+
+	public void delete(Long p) {
+		dao.delete(20L);
+
+	}
+
+	@Override
+	public Product get(Long p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

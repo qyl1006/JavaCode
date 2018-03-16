@@ -1,0 +1,29 @@
+package cn.wlfcode.shop.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ProductServiceTest {
+
+	@Test
+	public void testSave() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUpdate() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDelete() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGet() {
+		fail("Not yet implemented");
+	}
+
+}

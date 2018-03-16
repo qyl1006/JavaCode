@@ -1,0 +1,7 @@
+package cn.wlfcode.shop.util;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public abstract class MyBatis {
+	private static SqlSessionFactory factory;
+}

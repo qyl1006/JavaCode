@@ -1,0 +1,19 @@
+package cn.wlfcode.shop.util;
+
+import java.io.InputStream;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public abstract class MyBatis {
+	private static SqlSessionFactory factory;
+	
+	static{
+		try {
+			InputStream in = Resources.getResourceAsStream("mybatis.xml");
+			new SqlSessionFactoryBuilder().build(inputStream);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

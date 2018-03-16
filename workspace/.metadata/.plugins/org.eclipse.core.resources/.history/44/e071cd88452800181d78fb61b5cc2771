@@ -1,7 +1,0 @@
-package cn.wolfcode.shop.web.servlet;
-
-import javax.servlet.http.HttpServlet;
-
-public class ProductServlet extends HttpServlet{
-
-}

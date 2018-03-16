@@ -1,8 +1,0 @@
-package cn.colfcode.shop.web.servlet;
-
-import javax.servlet.annotation.WebServlet;
-
-@WebServlet("/product")
-public class ProductServlet {
-
-}

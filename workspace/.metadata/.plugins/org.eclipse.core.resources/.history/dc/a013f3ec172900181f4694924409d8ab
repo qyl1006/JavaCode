@@ -1,0 +1,40 @@
+package cn.wlfcode.shop.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import cn.wlfcode.shop.dao.IProductDAO;
+import cn.wlfcode.shop.dao.impl.ProductDAOImpl;
+import cn.wlfcode.shop.domain.Product;
+import cn.wlfcode.shop.service.IProductService;
+import cn.wlfcode.shop.service.impl.ProductServiceImpl;
+
+public class ProductServiceTest {
+	private IProductService service = new ProductServiceImpl();
+	private IProductDAO dao = new ProductDAOImpl();
+	
+	
+	@Test
+	public void testSave() {
+		Product p = new Product(null, "测试保存11111", null, null);
+		service.save(p);
+	}
+
+	@Test
+	public void testUpdate() {
+		Product p = new Product(20L, "测试更新11111", null, null);
+		service.update(p);
+	}
+
+	@Test
+	public void testDelete() {
+		service.delete(20L);
+	}
+
+	@Test
+	public void testGet() {
+		service.get(14L)
+	}
+
+}

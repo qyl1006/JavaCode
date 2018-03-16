@@ -1,0 +1,8 @@
+package cn.wlfcode.shop.web.servlet;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet("/product")
+public class ProductServlet {
+
+}
