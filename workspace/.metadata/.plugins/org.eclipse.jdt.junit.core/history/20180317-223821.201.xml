@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ProductServiceTest.testCount" project="task06" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="testCount" classname="cn.wolfcode.shop.test.ProductServiceTest" time="0.382"/>
+</testrun>

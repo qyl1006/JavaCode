@@ -1,7 +1,0 @@
-package cn.wolfcode.session.base;
-
-import javax.servlet.http.HttpServlet;
-
-public class ListServlet extends HttpServlet{
-
-}

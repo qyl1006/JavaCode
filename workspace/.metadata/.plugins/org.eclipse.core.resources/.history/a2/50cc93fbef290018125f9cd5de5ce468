@@ -1,0 +1,52 @@
+package cn.wolfcode.shop.test;
+
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+
+import cn.wolfcode.shop.dao.IProductDAO;
+import cn.wolfcode.shop.dao.impl.ProductDAOImpl;
+import cn.wolfcode.shop.domain.Product;
+import cn.wolfcode.shop.service.IProductService;
+import cn.wolfcode.shop.service.impl.ProductServiceImpl;
+
+public class ProductServiceTest {
+	private IProductService service = new ProductServiceImpl();
+	private IProductDAO dao = new ProductDAOImpl();
+	
+	
+	
+	@Test
+	public void testSave() {
+		Product p = new Product(null, "测试11", null, null);
+		service.save(p);
+	}
+
+	@Test
+	public void testUpdate() {
+		Product p = new Product(21L, "测试12222", null, null);
+		service.update(p);
+	}
+
+	@Test
+	public void testDelete() {
+		service.delete(21L);
+	}
+
+	@Test
+	public void testGet() {
+		System.out.println(service.get(7L));
+	}
+	
+	@Test
+	public void testCount() {
+		System.out.println(dao.queryCount(qo));
+	}
+	
+	
+	@Test
+	public void test() {
+		System.out.println(service.get(7L));
+	}
+
+}

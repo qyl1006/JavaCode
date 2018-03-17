@@ -1,0 +1,77 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		function goPage(pageNum){
+			var form.document.getElementById("f1");
+			form.currentPage.value = pageNum;
+			form.subim();
+		}
+	</script>
+</head>
+<body>
+<form action="/product" method="post" id='f1'>
+	<table width="80%" align="center" border="1" cellpadding="0" cellspacing="0">
+		<tr align="center">
+			<td colspan="5">
+				<a href="/product?cmd=edit">增加</a>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="5">
+				关键字:<input type="text" name="keyWord" value="${qo.keyWord}"/>
+				价格:<input type="text" name="minPrice" value="${qo.minPrice}"/> - 
+					<input type="text" name="maxPrice" value="${qo.maxPrice}"/>
+					<input type="button" value="查询" onclick="goPage(1)">
+			</td>
+		</tr>
+	
+		<tr align="center" >
+			<th>编号</th>
+			<th>手机型号</th>
+			<th>价格</th>
+			<th>xx</th>
+			<th>操作</th>
+		</tr>
+		
+	<c:forEach items="${result.data}" var="p" varStatus="vs">
+		<tr align="center" style="background-color: ${vs.count % 2 == 0 ? '' : 'red'}">
+			<td>${p.id}</td>
+			<td>${p.name}</td>
+			<td>${p.price}</td>
+			<td>${p.info}</td>
+			<td>
+				<a href="/product?cmd=edit&id=${p.id}">编辑</a>
+				<a href="/product?cmd=delete&id=${p.id}">删除</a>
+			</td>
+		</tr>
+	</c:forEach>	
+		
+		<tr>
+			<td colspan="5">
+				<a href="javescript:goPage(1)">首页</a>
+				<a href="javescript:goPage(${result.prevPage})">上一页</a>
+				<a href="javescript:goPage(${result.nextPage})">下一页</a>
+				<a href="javescript:goPage(${result.endPage})">尾页</a>
+				当前${result.currentPage}/${result.endPage}页
+				总共${result.pageCount}条
+				每页显示<select name="pageSize" onchange="goPage(1)">
+							<option ${result.pageSize == 2 ? 'selected' : ''}>2</option>
+							<option ${result.pageSize == 4 ? 'selected' : ''}>4</option>
+							<option ${result.pageSize == 6 ? 'selected' : ''}>6</option>
+						</select>条
+						
+				跳转<input />
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

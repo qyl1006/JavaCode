@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+<typeInfo handle="=task05/src&lt;cn.wlfcode.shop.dao{IProductDAO.java[IProductDAO" modifiers="513" timestamp="1521203186741"/>
+<typeInfo handle="=task05/E:\/Java\/jdk1.8.0_152\/jre\/lib\/rt.jar&lt;java.awt.image(ImageProducer.class[ImageProducer" modifiers="1537" timestamp="1517143974526"/>
+<typeInfo handle="=task05/src&lt;cn.wlfcode.shop.service{IProductService.java[IProductService" modifiers="513" timestamp="1521205955230"/>
+</typeInfoHistroy>
